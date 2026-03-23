@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - ShopVerse</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+    <div class="container nav-bar">
+       <div class="logo"><a href="index.html">SHOP<span>VERSE</span></a></div>          
+       <div class="search-container">
+       <input type="text" id="searchInput" placeholder="Search product catalog...">
+       <div id="searchResults" class="search-dropdown hidden"></div>
+    </div>
+     <nav>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+    </nav>
+    <div class="header-actions">
+        <button class="btn btn-outline"><i class="fa-solid fa-cart-shopping"></i> Cart (<span id="cartCount">0</span>)</button>
+    </div>
+    </div>
+    </header>
+    <main class="container" style="padding-top: 48px;">  
+        <section class="product-viewport">
+        <div class="product-media">
+    <div class="main-image-wrapper">
+        <img id="mainImage" src="assets/image/tech/image-29.png" alt="Smart Audio Headset">
+    </div>
+    <div class="thumbnail-row">
+        <img src="assets/image/tech/image-29.png" class="thumb active" onclick="changeImage('assets/image/tech/image-29.png', this)">
+        <img src="assets/image/tech/image-85.png" class="thumb" onclick="changeImage('assets/image/tech/image-85.png', this)">
+        <img src="assets/image/tech/image-24.png" class="thumb" onclick="changeImage('assets/image/tech/image-24.png', this)">
+    </div>
+    </div>
+         <div class="product-specs">
+         <p class="breadcrumbs">Products / Audio / Smart Headset</p>
+         <h1 class="product-title">Smart Audio Spatial Headset</h1>  
+         <div class="ratings-block">
+         <span class="stars">★★★★☆</span>
+         <span class="ratings-count">(128 customer reviews)</span>
+    </div>
+         <div class="price-block">
+         <span class="current-price">$129.99</span>
+         <span class="old-price">$159.99</span>
+         <span class="discount-tag">20% OFF</span>
+    </div>
+         <p class="product-description">Experience immersive spatial audio tracking with hybrid noise-canceling thresholds. Designed for modern desktop workspace aesthetics and heavy acoustic rendering environments.</p>
+    <div class="variant-selection">
+         <div class="size-group">
+         <label for="sizeDropdown">Select Size / Framework Constraint:</label>
+    <select id="sizeDropdown" class="form-select">
+         <option value="">Choose a size</option>
+         <option value="small">Standard (Regular Fit)</option>
+         <option value="medium">Pro (Medium Fit)</option>
+         <option value="large">Enterprise (Large Fit)</option>
+    </select>
+    </div>
+    </div>
+    <div class="purchase-actions">
+         <div class="quantity-controller">
+         <button onclick="updateQty(-1)">-</button>
+         <input type="text" id="quantityInput" value="1" readonly>
+         <button onclick="updateQty(1)">+</button>
+    </div>
+         <button class="btn btn-primary add-cart-btn" onclick="addToCartTrigger()">Add to Cart</button>
+   </div>
+   <div class="product-metadata">
+         <p><span>SKU:</span> HD-420-SPA</p>
+         <p><span>Category:</span> Acoustic Peripherals, Tech</p>
+         <p><span>Availability:</span> In Stock</p>
+   </div>
+    </div>
+   </section>
+         <section class="reviews-section">
+         <h2 class="section-title">Customer Reviews</h2>
+         <div class="reviews-grid">
+         <div class="review-card">
+         <div class="review-header">
+    <div>
+         <h4>Alex Morgan</h4>
+         <span class="stars">★★★★★</span>
+    </div>
+         <span class="review-date">March 14, 2026</span>
+    </div>
+         <p>The audio fidelity is absolutely stunning. Pairs well with standard e-commerce visual palettes. Highly recommended for workspace tracking setup.</p>
+    </div>
+    <div class="review-card">
+         <div class="review-header">
+    <div>
+         <h4>Jordan Reed</h4>
+         <span class="stars">★★★★☆</span>
+    </div>
+         <span class="review-date">Feb 28, 2026</span>
+    </div>
+         <p>Clear delivery parameters. Use of standard auto-layout specs for the design is noticeable. Good fit.</p>
+    </div>
+    </div>
+    </section>
+         <section class="related-section">
+         <h2 class="section-title">Related Hardware Peripherals</h2>
+         <div class="products-grid">
+         <div class="product-card">
+         <div class="product-img-wrapper">
+         <img src="assets/image/tech/image-85.png" alt="Ergonomic Mouse">
+    </div>
+    <div class="product-info">
+         <h3>Ergonomic Mouse UI</h3>
+         <p class="product-sku">SKU: ERG-M1</p>
+         <div class="product-bottom">
+         <span class="product-price">$45.00</span>
+         <button class="btn btn-primary btn-buy">View Details</button>
+    </div>
+    </div>
+    </div>
+         <div class="product-card">
+         <div class="product-img-wrapper">
+         <img src="assets/image/tech/image-24.png" alt="Workspace Keyboard">
+         </div>
+         <div class="product-info">
+         <h3>Mechanical Keyboard</h3>
+         <p class="product-sku">SKU: MECH-V2</p>
+         <div class="product-bottom">
+         <span class="product-price">$189.99</span>
+         <button class="btn btn-primary btn-buy">View Details</button>
+    </div>
+    </div>
+    </div>
+    </div>
+</section>
+</main>
+    <footer class="site-footer">
+        <div class="container footer-bottom">
+        <p>&copy; 2026 ShopVerse Commerce Workspace. All rights reserved.</p>
+    </div>
+    </footer>
+        <script src="script.js"></script>
+</body>
+</html>
